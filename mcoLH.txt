@@ -1,0 +1,9 @@
+mcoLH is the same as mco.py. 
+mco1 is the updated version.
+
+Differences:
+1. ctmcH: the delta term 
+# The default delta term in mcoLH does not work in NBA data sets.
+2. fixCTMC: factor term included
+
+

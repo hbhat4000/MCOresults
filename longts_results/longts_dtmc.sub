@@ -1,0 +1,15 @@
+##### tftest.sub ###################
+#! /bin/bash
+#$ -S /bin/bash
+#$ -q std.q
+#$ -cwd
+#$ -N longts_dtmc
+#$ -j y
+#$ -o longts_dtmc.qlog
+#$ -l mem_free=16G
+#$ -pe smp 2
+#$ -V
+start_time=$SECONDS
+python longts_dtmc.py
+runtime=$(echo $SECONDS - $start_time | bc)
+echo "Total elapse time is $runtime"
