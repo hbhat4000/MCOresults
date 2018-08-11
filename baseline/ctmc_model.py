@@ -5,7 +5,7 @@ import mcoLH as mco
 # import matplotlib.pyplot as plt
 
 # specify the states
-states = np.array([2**x for x in range(2,12)])
+states = np.array([2**x for x in range(2,3)])
 lstates = len(states)
 
 # keep track of how many simulations 
@@ -25,6 +25,7 @@ LTerrN_train = np.zeros((lstates, N))
 LTerrN_test = np.zeros((lstates, N))
 STerrN = np.zeros((lstates, N))
 traintimeN = np.zeros((lstates, N))
+
 LTerrF_train = np.zeros((lstates, N))
 LTerrF_test = np.zeros((lstates, N))
 STerrF = np.zeros((lstates, N))
@@ -33,6 +34,11 @@ solFound = np.zeros((lstates, N))
 constrviol = np.zeros((lstates, N))
 nnz = np.zeros((lstates, N))
 epsnorms = np.zeros((lstates, 3, N))
+
+baseline_train = np.zeros((4, lstates, N))
+baseline_test = np.zeros((4, lstates, N))
+baseline_ST = np.zeros((4, lstates, N))
+traintimeB = np.zeros((4, lstates, N))
 
 for whichstate in range(lstates):
     for simctr in range(N):
@@ -55,7 +61,7 @@ for whichstate in range(lstates):
         traintimeN[whichstate, simctr] = o4
         
         # fixed test block
-        o1,o2,o3,o4,o5 = mco.test_CTMC(ts,tseq,ts_test,tseq_test,wantFixed=True)
+        o1,o2,o3,o4,o5 = mco.test_CTMC(ts,tseq,ts_test,tseq_test,md='fixed')
         LTerrF_train[whichstate, simctr] = o1
         LTerrF_test[whichstate, simctr] = o2
         STerrF[whichstate, simctr] = o3
@@ -64,7 +70,16 @@ for whichstate in range(lstates):
         constrviol[whichstate, simctr] = o5[1]
         nnz[whichstate, simctr] = o5[2]
         epsnorms[whichstate, :, simctr] = np.array(o5[3])
-    
+
+        # baseline test block
+        for whichbase in range(4):
+            mymode = 'baseline' + str(whichbase+1)
+            o1,o2,o3,o4 = mco.test_CTMC(ts,tseq,ts_test,tseq_test,md=mymode)
+            baseline_train[whichbase, whichstate, simctr] = o1
+            baseline_test[whichbase, whichstate, simctr] = o2
+            baseline_ST[whichbase, whichstate, simctr] = o3
+            traintimeB[whichbase, whichstate, simctr] = o4
+
     outname = "ctmcresults"+str(states[whichstate])+".npz"
     np.savez(outname, LTerrN_train = LTerrN_train,
                        LTerrN_test = LTerrN_test,
@@ -77,6 +92,9 @@ for whichstate in range(lstates):
                           solFound = solFound,
                         constrviol = constrviol,
                                nnz = nnz,
-                          epsnorms = epsnorms)
-
+                          epsnorms = epsnorms,
+                    baseline_train = baseline_train,
+                     baseline_test = baseline_test,
+                       baseline_ST = baseline_ST,
+                        traintimeB = traintimeB)
 
