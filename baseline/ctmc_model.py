@@ -5,7 +5,7 @@ import mcoLH as mco
 # import matplotlib.pyplot as plt
 
 # specify the states
-states = np.array([2**x for x in range(2,3)])
+states = np.array([2**x for x in range(2,12)])
 lstates = len(states)
 
 # keep track of how many simulations 
