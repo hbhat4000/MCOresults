@@ -1,13 +1,4 @@
-
-# coding: utf-8
-
-# In[1]:
-
-
 import pandas as pd
-
-
-# In[2]:
 
 
 # load regular season data
@@ -17,13 +8,7 @@ df = pd.read_csv('events_2017-2018_pbp.csv',
                          96,97,98,99,100])
 
 
-# In[3]:
-
-
 colnames = pd.read_csv('colnames.csv',header=None)
-
-
-# In[4]:
 
 
 # make a dictionary of all 5-person units
@@ -45,46 +30,24 @@ for i in range(df.shape[0]):
     
 
 
-# In[5]:
-
-
 import pickle
-
-
-# In[6]:
 
 
 pickle.dump(u2i, open('u2i.pickle', 'wb'))
 pickle.dump(i2u, open('i2u.pickle', 'wb'))
 
 
-# In[7]:
-
-
-u2i[tuple(sorted([203926, 101127, 201584, 203124, 204001]))]
-
-
-# In[8]:
-
-
-df.loc[480]
-
-
-# In[20]:
+# u2i[tuple(sorted([203926, 101127, 201584, 203124, 204001]))]
+# df.loc[480]
 
 
 uniqteamnames = sorted(list(set(df['AWAY_TEAM'].append(df['HOME_TEAM']))))
-print(uniqteamnames)
-print(len(uniqteamnames))
 
-
-# In[12]:
+# print(uniqteamnames)
+# print(len(uniqteamnames))
 
 
 import numpy as np
-
-
-# In[13]:
 
 
 def myprocess(mat):
@@ -95,9 +58,6 @@ def myprocess(mat):
     
     newmat = np.copy(mat)[np.where(selection)[0],:]
     return newmat
-
-
-# In[14]:
 
 
 gametraj = {}
@@ -139,13 +99,11 @@ for i in range(df.shape[0]):
         
 
 
-# In[15]:
 
 
 pickle.dump(gametraj, open('gametrajhalf.pickle', 'wb'))
 
 
-# In[16]:
 
 
 curgameid = -999999
@@ -182,13 +140,11 @@ for i in range(df.shape[0]):
         
 
 
-# In[ ]:
 
 
 pickle.dump(gametraj, open('gametraj.pickle', 'wb'))
 
 
-# In[ ]:
 
 
 # remaining steps
