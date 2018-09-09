@@ -9,10 +9,11 @@ teamnames = gametraj.keys()
 
 # form team lineups
 teamlineups = {}  # for each team, this gives a list of lineups
+                  # can also think of this as the reverse of teamforlookup
 teamforlookup = {}   # for each team and each lineup, gives us an integer index
-teamrevlookup = {}   # for each team and each integer index, gives us a lineup
+lineupgamesplayed = {}  # for each team & lineup, number of games played
+lineupplayingtimes = {} # for each team & lineup, number of seconds played
 
-lineupgamesplayed = {}
 for tn in teamnames:
     teamlineups[tn] = []
     lineupgamesplayed[tn] = {}
@@ -34,12 +35,9 @@ for tn in teamnames:
 
 for tn in teamnames:
     teamforlookup[tn] = {}
-    teamrevlookup[tn] = {}
     for i in teamlineups[tn]:
         teamforlookup[tn][i] = teamlineups[tn].index(i)
-        teamrevlookup[tn][teamlineups[tn].index(i)] = i
 
-lineupplayingtimes = {}
 for tn in teamnames:
     lineupplayingtimes[tn] = {}
     for i in gametraj[tn]:
@@ -50,5 +48,10 @@ for tn in teamnames:
                 lineupplayingtimes[tn][thisgame[j-1,1]] += timeplayed
             else:
                 lineupplayingtimes[tn][thisgame[j-1,1]] = timeplayed
+
+pickle.dump(teamlineups, open('teamlineups.pickle','wb'))
+pickle.dump(teamforlookup, open('teamforlookup.pickle','wb'))
+pickle.dump(lineupgamesplayed, open('lineupgamesplayed.pickle','wb'))
+pickle.dump(lineupplayingtimes, open('lineupplayingtimes.pickle','wb'))
 
 
