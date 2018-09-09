@@ -10,13 +10,13 @@
 "0021700009","Hawks","Mavericks",117,111
 "0021700010","Nuggets","Jazz",96,106
 "0021700011","Timberwolves","Spurs",99,107
-"0021700012","TrailBlazers","Suns",124,76
+"0021700012","Trail Blazers","Suns",124,76
 "0021700013","Rockets","Kings",105,100
 "0021700014","Bulls","Raptors",100,117
 "0021700015","Knicks","Thunder",84,105
 "0021700016","Clippers","Lakers",108,92
 "0021700017","Hawks","Hornets",91,109
-"0021700018","TrailBlazers","Pacers",114,96
+"0021700018","Trail Blazers","Pacers",114,96
 "0021700019","Celtics","76ers",102,92
 "0021700020","Pistons","Wizards",111,115
 "0021700021","Cavaliers","Bucks",116,97
@@ -32,7 +32,7 @@
 "0021700031","Spurs","Bulls",87,77
 "0021700032","Mavericks","Rockets",91,107
 "0021700033","Warriors","Grizzlies",101,111
-"0021700034","TrailBlazers","Bucks",110,113
+"0021700034","Trail Blazers","Bucks",110,113
 "0021700035","Kings","Nuggets",79,96
 "0021700036","Thunder","Jazz",87,96
 "0021700037","Suns","Clippers",88,130
@@ -51,7 +51,7 @@
 "0021700050","Nets","Magic",121,125
 "0021700051","Knicks","Celtics",89,110
 "0021700052","Pacers","Timberwolves",130,107
-"0021700053","Pelicans","TrailBlazers",93,103
+"0021700053","Pelicans","Trail Blazers",93,103
 "0021700054","Jazz","Clippers",84,102
 "0021700055","Nuggets","Hornets",93,110
 "0021700056","Timberwolves","Pistons",101,122
@@ -66,7 +66,7 @@
 "0021700065","Hawks","Bulls",86,91
 "0021700066","Mavericks","Grizzlies",91,96
 "0021700067","Celtics","Bucks",96,89
-"0021700068","Clippers","TrailBlazers",104,103
+"0021700068","Clippers","Trail Blazers",104,103
 "0021700069","Pelicans","Kings",114,106
 "0021700070","Rockets","Hornets",109,93
 "0021700071","Spurs","Magic",87,114
@@ -81,7 +81,7 @@
 "0021700080","Rockets","Grizzlies",89,103
 "0021700081","76ers","Mavericks",112,110
 "0021700082","Lakers","Jazz",81,96
-"0021700083","Suns","TrailBlazers",107,114
+"0021700083","Suns","Trail Blazers",107,114
 "0021700084","Pistons","Clippers",95,87
 "0021700085","Bucks","Hawks",117,106
 "0021700086","Spurs","Pacers",94,97
@@ -97,7 +97,7 @@
 "0021700096","Hornets","Grizzlies",104,99
 "0021700097","Magic","Pelicans",115,99
 "0021700098","Mavericks","Jazz",89,104
-"0021700099","Raptors","TrailBlazers",99,85
+"0021700099","Raptors","Trail Blazers",99,85
 "0021700100","Warriors","Clippers",141,113
 "0021700101","Kings","Pacers",83,101
 "0021700102","Suns","Nets",122,114
@@ -113,10 +113,10 @@
 "0021700112","Magic","Grizzlies",101,99
 "0021700113","Timberwolves","Pelicans",104,98
 "0021700114","Raptors","Nuggets",111,129
-"0021700115","TrailBlazers","Jazz",103,112
+"0021700115","Trail Blazers","Jazz",103,112
 "0021700116","Mavericks","Clippers",98,119
 "0021700117","Warriors","Spurs",112,92
-"0021700118","Lakers","TrailBlazers",110,113
+"0021700118","Lakers","Trail Blazers",110,113
 "0021700119","Bucks","Pistons",96,105
 "0021700120","Bulls","Magic",105,83
 "0021700121","Pacers","76ers",110,121
@@ -142,7 +142,7 @@
 "0021700141","Suns","Spurs",95,112
 "0021700142","Pacers","Knicks",101,108
 "0021700143","Hornets","Timberwolves",94,112
-"0021700144","Thunder","TrailBlazers",99,103
+"0021700144","Thunder","Trail Blazers",99,103
 "0021700145","Grizzlies","Lakers",102,107
 "0021700146","Celtics","Hawks",110,107
 "0021700147","Nets","Suns",98,92
@@ -155,7 +155,7 @@
 "0021700154","Clippers","Spurs",107,120
 "0021700155","Nets","Nuggets",104,112
 "0021700156","76ers","Jazz",104,97
-"0021700157","Grizzlies","TrailBlazers",98,97
+"0021700157","Grizzlies","Trail Blazers",98,97
 "0021700158","Thunder","Kings",86,94
 "0021700159","Pacers","Pistons",97,114
 "0021700160","Knicks","Magic",99,112
@@ -174,7 +174,7 @@
 "0021700173","Bucks","Spurs",94,87
 "0021700174","Magic","Suns",128,112
 "0021700175","Heat","Jazz",84,74
-"0021700176","Nets","TrailBlazers",101,97
+"0021700176","Nets","Trail Blazers",101,97
 "0021700177","Hawks","Wizards",94,113
 "0021700178","Clippers","Pelicans",103,111
 "0021700179","Kings","Knicks",91,118
@@ -196,7 +196,7 @@
 "0021700195","Hawks","Pelicans",105,106
 "0021700196","Lakers","Suns",100,93
 "0021700197","Timberwolves","Jazz",109,98
-"0021700198","Nuggets","TrailBlazers",82,99
+"0021700198","Nuggets","Trail Blazers",82,99
 "0021700199","Magic","Warriors",100,110
 "0021700200","76ers","Clippers",109,105
 "0021700201","Celtics","Nets",109,102
@@ -211,7 +211,7 @@
 "0021700210","Spurs","Timberwolves",86,98
 "0021700211","Raptors","Pelicans",125,116
 "0021700212","Bulls","Thunder",79,92
-"0021700213","Magic","TrailBlazers",94,99
+"0021700213","Magic","Trail Blazers",94,99
 "0021700214","76ers","Lakers",115,109
 "0021700215","Warriors","Celtics",88,92
 "0021700216","Rockets","Suns",142,116
@@ -223,7 +223,7 @@
 "0021700222","Hornets","Bulls",120,123
 "0021700223","Thunder","Spurs",101,104
 "0021700224","Timberwolves","Mavericks",111,87
-"0021700225","TrailBlazers","Kings",82,86
+"0021700225","Trail Blazers","Kings",82,86
 "0021700226","Pelicans","Nuggets",114,146
 "0021700227","Suns","Lakers",122,113
 "0021700228","Clippers","Hornets",87,102
@@ -232,7 +232,7 @@
 "0021700231","Warriors","76ers",124,116
 "0021700232","Rockets","Grizzlies",105,83
 "0021700233","Bucks","Mavericks",79,111
-"0021700234","Kings","TrailBlazers",90,102
+"0021700234","Kings","Trail Blazers",90,102
 "0021700235","Pacers","Heat",120,95
 "0021700236","Warriors","Nets",118,111
 "0021700237","Wizards","Raptors",91,100
@@ -244,7 +244,7 @@
 "0021700243","Pacers","Magic",105,97
 "0021700244","Jazz","76ers",86,107
 "0021700245","Clippers","Knicks",85,107
-"0021700246","TrailBlazers","Grizzlies",100,92
+"0021700246","Trail Blazers","Grizzlies",100,92
 "0021700247","Wizards","Bucks",99,88
 "0021700248","Thunder","Pelicans",107,114
 "0021700249","Celtics","Mavericks",110,102
@@ -253,7 +253,7 @@
 "0021700252","Bulls","Lakers",94,103
 "0021700253","Wizards","Hornets",124,129
 "0021700254","Nets","Cavaliers",109,119
-"0021700255","TrailBlazers","76ers",81,101
+"0021700255","Trail Blazers","76ers",81,101
 "0021700256","Clippers","Hawks",116,103
 "0021700257","Celtics","Heat",98,104
 "0021700258","Raptors","Knicks",100,108
@@ -265,7 +265,7 @@
 "0021700264","Bucks","Suns",113,107
 "0021700265","Bulls","Jazz",80,110
 "0021700266","Lakers","Kings",102,113
-"0021700267","TrailBlazers","Nets",127,125
+"0021700267","Trail Blazers","Nets",127,125
 "0021700268","Knicks","Hawks",104,116
 "0021700269","Magic","Celtics",103,118
 "0021700270","Hornets","Cavaliers",99,100
@@ -277,7 +277,7 @@
 "0021700276","Bulls","Warriors",94,143
 "0021700277","Spurs","Hornets",106,86
 "0021700278","Magic","76ers",111,130
-"0021700279","TrailBlazers","Wizards",108,105
+"0021700279","Trail Blazers","Wizards",108,105
 "0021700280","Raptors","Hawks",112,78
 "0021700281","Celtics","Pacers",108,98
 "0021700282","Knicks","Rockets",102,117
@@ -291,7 +291,7 @@
 "0021700290","Magic","Pacers",109,121
 "0021700291","Cavaliers","76ers",113,91
 "0021700292","Pistons","Celtics",118,108
-"0021700293","TrailBlazers","Knicks",103,91
+"0021700293","Trail Blazers","Knicks",103,91
 "0021700294","Nets","Rockets",103,117
 "0021700295","Mavericks","Spurs",108,115
 "0021700296","Kings","Warriors",110,106
@@ -314,7 +314,7 @@
 "0021700313","Cavaliers","Hawks",121,114
 "0021700314","76ers","Celtics",97,108
 "0021700315","Bulls","Nuggets",110,111
-"0021700316","Bucks","TrailBlazers",103,91
+"0021700316","Bucks","Trail Blazers",103,91
 "0021700317","Jazz","Clippers",126,107
 "0021700318","Warriors","Magic",133,112
 "0021700319","Pacers","Raptors",115,120
@@ -331,7 +331,7 @@
 "0021700330","Pistons","76ers",103,108
 "0021700331","Kings","Bucks",104,109
 "0021700332","Lakers","Nuggets",100,115
-"0021700333","Pelicans","TrailBlazers",123,116
+"0021700333","Pelicans","Trail Blazers",123,116
 "0021700334","Magic","Knicks",105,100
 "0021700335","Warriors","Heat",123,95
 "0021700336","Clippers","Timberwolves",106,112
@@ -350,7 +350,7 @@
 "0021700349","Wizards","Jazz",69,116
 "0021700350","Suns","Raptors",113,126
 "0021700351","Jazz","Thunder",94,100
-"0021700352","Wizards","TrailBlazers",106,92
+"0021700352","Wizards","Trail Blazers",106,92
 "0021700353","Kings","Cavaliers",95,101
 "0021700354","Bulls","Pacers",96,98
 "0021700355","Hawks","Magic",106,110
@@ -382,7 +382,7 @@
 "0021700381","Jazz","Bucks",100,117
 "0021700382","Thunder","Grizzlies",102,101
 "0021700383","Spurs","Suns",104,101
-"0021700384","Rockets","TrailBlazers",124,117
+"0021700384","Rockets","Trail Blazers",124,117
 "0021700385","Raptors","Kings",102,87
 "0021700386","Celtics","Pistons",91,81
 "0021700387","Nuggets","Pacers",116,126
@@ -393,7 +393,7 @@
 "0021700392","Pelicans","Rockets",123,130
 "0021700393","Heat","Grizzlies",107,82
 "0021700394","Hornets","Thunder",116,103
-"0021700395","TrailBlazers","Warriors",104,111
+"0021700395","Trail Blazers","Warriors",104,111
 "0021700396","Raptors","Clippers",91,96
 "0021700397","Hawks","Cavaliers",114,123
 "0021700398","Nuggets","Pistons",103,84
@@ -406,7 +406,7 @@
 "0021700405","Clippers","Magic",106,95
 "0021700406","Grizzlies","Wizards",87,93
 "0021700407","Nuggets","Celtics",118,124
-"0021700408","TrailBlazers","Heat",102,95
+"0021700408","Trail Blazers","Heat",102,95
 "0021700409","Jazz","Bulls",100,103
 "0021700410","Bucks","Pelicans",108,115
 "0021700411","Raptors","Suns",115,109
@@ -418,7 +418,7 @@
 "0021700417","Mavericks","Warriors",97,112
 "0021700418","Heat","Hornets",104,98
 "0021700419","Pistons","Pacers",104,98
-"0021700420","TrailBlazers","Magic",95,88
+"0021700420","Trail Blazers","Magic",95,88
 "0021700421","Thunder","76ers",119,117
 "0021700422","Clippers","Wizards",91,100
 "0021700423","Jazz","Celtics",107,95
@@ -427,7 +427,7 @@
 "0021700426","Bulls","Bucks",115,109
 "0021700427","Pelicans","Nuggets",111,117
 "0021700428","Spurs","Rockets",109,124
-"0021700429","TrailBlazers","Hornets",93,91
+"0021700429","Trail Blazers","Hornets",93,91
 "0021700430","Jazz","Cavaliers",100,109
 "0021700431","Thunder","Knicks",96,111
 "0021700432","Clippers","Heat",85,90
@@ -444,7 +444,7 @@
 "0021700443","Heat","Hawks",104,110
 "0021700444","76ers","Bulls",115,117
 "0021700445","Jazz","Rockets",99,120
-"0021700446","TrailBlazers","Timberwolves",107,108
+"0021700446","Trail Blazers","Timberwolves",107,108
 "0021700447","Nuggets","Thunder",94,95
 "0021700448","Suns","Mavericks",97,91
 "0021700449","Clippers","Spurs",91,109
@@ -461,7 +461,7 @@
 "0021700460","Jazz","Thunder",79,107
 "0021700461","Pistons","Mavericks",93,110
 "0021700462","Timberwolves","Nuggets",112,104
-"0021700463","Spurs","TrailBlazers",93,91
+"0021700463","Spurs","Trail Blazers",93,91
 "0021700464","Grizzlies","Warriors",84,97
 "0021700465","Suns","Clippers",95,108
 "0021700466","Bulls","Cavaliers",112,115
@@ -476,7 +476,7 @@
 "0021700475","Clippers","Rockets",128,118
 "0021700476","Hornets","Bucks",104,109
 "0021700477","Hawks","Thunder",117,120
-"0021700478","Nuggets","TrailBlazers",102,85
+"0021700478","Nuggets","Trail Blazers",102,85
 "0021700479","Lakers","Warriors",106,113
 "0021700480","76ers","Raptors",86,102
 "0021700481","Bucks","Hornets",106,111
@@ -489,7 +489,7 @@
 "0021700488","Thunder","Jazz",103,89
 "0021700489","Nuggets","Warriors",96,81
 "0021700490","Timberwolves","Suns",115,106
-"0021700491","TrailBlazers","Lakers",95,92
+"0021700491","Trail Blazers","Lakers",95,92
 "0021700492","Spurs","Kings",108,99
 "0021700493","76ers","Knicks",105,98
 "0021700494","Cavaliers","Warriors",92,99
@@ -518,7 +518,7 @@
 "0021700517","Rockets","Celtics",98,99
 "0021700518","Timberwolves","Bucks",96,102
 "0021700519","Knicks","Spurs",107,119
-"0021700520","76ers","TrailBlazers",110,114
+"0021700520","76ers","Trail Blazers",110,114
 "0021700521","Rockets","Wizards",103,121
 "0021700522","Hawks","Raptors",98,111
 "0021700523","Nets","Heat",111,87
@@ -531,7 +531,7 @@
 "0021700530","Spurs","Pistons",79,93
 "0021700531","Heat","Magic",117,111
 "0021700532","Knicks","Pelicans",105,103
-"0021700533","TrailBlazers","Hawks",89,104
+"0021700533","Trail Blazers","Hawks",89,104
 "0021700534","Cavaliers","Jazz",101,104
 "0021700535","Grizzlies","Warriors",128,141
 "0021700536","76ers","Nuggets",107,102
@@ -545,9 +545,9 @@
 "0021700544","76ers","Suns",123,110
 "0021700545","Magic","Nets",95,98
 "0021700546","Bucks","Raptors",127,131
-"0021700547","TrailBlazers","Bulls",124,120
+"0021700547","Trail Blazers","Bulls",124,120
 "0021700548","Lakers","Timberwolves",96,114
-"0021700549","TrailBlazers","Cavaliers",110,127
+"0021700549","Trail Blazers","Cavaliers",110,127
 "0021700550","Spurs","Knicks",100,91
 "0021700551","Hawks","Suns",103,104
 "0021700552","Hornets","Kings",131,111
@@ -574,7 +574,7 @@
 "0021700573","Suns","Spurs",89,103
 "0021700574","Jazz","Nuggets",91,99
 "0021700575","Wizards","Grizzlies",102,100
-"0021700576","Hawks","TrailBlazers",89,110
+"0021700576","Hawks","Trail Blazers",89,110
 "0021700577","Hornets","Lakers",108,94
 "0021700578","Warriors","Clippers",121,105
 "0021700579","Celtics","Nets",87,85
@@ -587,7 +587,7 @@
 "0021700586","Jazz","Heat",102,103
 "0021700587","Knicks","Mavericks",100,96
 "0021700588","Thunder","Suns",100,114
-"0021700589","Spurs","TrailBlazers",110,111
+"0021700589","Spurs","Trail Blazers",110,111
 "0021700590","Hawks","Lakers",113,132
 "0021700591","Bucks","Pacers",96,109
 "0021700592","Raptors","Nets",114,113
@@ -598,7 +598,7 @@
 "0021700597","Nuggets","Warriors",114,124
 "0021700598","Hawks","Clippers",107,108
 "0021700599","Heat","Raptors",90,89
-"0021700600","TrailBlazers","Thunder",117,106
+"0021700600","Trail Blazers","Thunder",117,106
 "0021700601","Magic","Mavericks",99,114
 "0021700602","Kings","Lakers",86,99
 "0021700603","Mavericks","Hornets",115,111
@@ -606,7 +606,7 @@
 "0021700605","Jazz","Wizards",107,104
 "0021700606","Pistons","Nets",114,80
 "0021700607","Bulls","Knicks",122,119
-"0021700608","TrailBlazers","Rockets",112,121
+"0021700608","Trail Blazers","Rockets",112,121
 "0021700609","Pelicans","Grizzlies",102,105
 "0021700610","Magic","Bucks",103,110
 "0021700611","Thunder","Timberwolves",88,104
@@ -622,7 +622,7 @@
 "0021700621","Nets","Hawks",110,105
 "0021700622","Warriors","Bucks",108,94
 "0021700623","Knicks","Timberwolves",108,118
-"0021700624","TrailBlazers","Pelicans",113,119
+"0021700624","Trail Blazers","Pelicans",113,119
 "0021700625","Grizzlies","Nuggets",78,87
 "0021700626","Rockets","Suns",112,95
 "0021700627","Lakers","Mavericks",107,101
@@ -635,7 +635,7 @@
 "0021700634","Bucks","Heat",79,97
 "0021700635","Pelicans","Knicks",123,118
 "0021700636","Pacers","Suns",120,97
-"0021700637","TrailBlazers","Timberwolves",103,120
+"0021700637","Trail Blazers","Timberwolves",103,120
 "0021700638","Hornets","Pistons",118,107
 "0021700639","Raptors","76ers",111,117
 "0021700640","Bucks","Wizards",104,95
@@ -650,7 +650,7 @@
 "0021700649","Timberwolves","Magic",102,108
 "0021700650","Pelicans","Celtics",116,113
 "0021700651","Mavericks","Nuggets",102,105
-"0021700652","Suns","TrailBlazers",111,118
+"0021700652","Suns","Trail Blazers",111,118
 "0021700653","Wizards","Hornets",109,133
 "0021700654","Pelicans","Hawks",93,94
 "0021700655","Spurs","Nets",100,95
@@ -664,7 +664,7 @@
 "0021700663","76ers","Celtics",89,80
 "0021700664","Magic","Cavaliers",103,104
 "0021700665","Timberwolves","Rockets",98,116
-"0021700666","Pacers","TrailBlazers",86,100
+"0021700666","Pacers","Trail Blazers",86,100
 "0021700667","Spurs","Raptors",83,86
 "0021700668","Heat","Nets",95,101
 "0021700669","Wizards","Pistons",122,112
@@ -680,7 +680,7 @@
 "0021700679","Warriors","Rockets",108,116
 "0021700680","Raptors","Timberwolves",109,115
 "0021700681","Clippers","Jazz",113,125
-"0021700682","Mavericks","TrailBlazers",108,117
+"0021700682","Mavericks","Trail Blazers",108,117
 "0021700683","Magic","Celtics",103,95
 "0021700684","Knicks","Lakers",107,127
 "0021700685","Nets","Pistons",101,100
@@ -692,7 +692,7 @@
 "0021700691","Suns","Bucks",105,109
 "0021700692","Bulls","Pelicans",128,132
 "0021700693","Wizards","Mavericks",75,98
-"0021700694","TrailBlazers","Nuggets",101,104
+"0021700694","Trail Blazers","Nuggets",101,104
 "0021700695","Timberwolves","Clippers",126,118
 "0021700696","Kings","Magic",105,99
 "0021700697","Nets","Thunder",108,109
@@ -706,7 +706,7 @@
 "0021700705","Raptors","Hawks",108,93
 "0021700706","Rockets","Mavericks",104,97
 "0021700707","Spurs","Grizzlies",108,85
-"0021700708","Timberwolves","TrailBlazers",114,123
+"0021700708","Timberwolves","Trail Blazers",114,123
 "0021700709","Celtics","Clippers",113,102
 "0021700710","Kings","Heat",89,88
 "0021700711","Wizards","Thunder",112,121
@@ -719,7 +719,7 @@
 "0021700718","Clippers","Grizzlies",109,100
 "0021700719","Nets","Bucks",91,116
 "0021700720","Rockets","Pelicans",113,115
-"0021700721","TrailBlazers","Mavericks",107,93
+"0021700721","Trail Blazers","Mavericks",107,93
 "0021700722","76ers","Spurs",97,78
 "0021700723","Knicks","Suns",107,85
 "0021700724","Thunder","Pistons",121,108
@@ -750,14 +750,14 @@
 "0021700749","Kings","Pelicans",114,103
 "0021700750","Nuggets","Spurs",104,106
 "0021700751","Warriors","Jazz",99,129
-"0021700752","TrailBlazers","Clippers",104,96
+"0021700752","Trail Blazers","Clippers",104,96
 "0021700753","Grizzlies","Pacers",101,105
 "0021700754","Lakers","Magic",105,127
 "0021700755","Hornets","Hawks",123,110
 "0021700756","76ers","Nets",108,116
 "0021700757","Heat","Cavaliers",89,91
 "0021700758","Knicks","Celtics",73,103
-"0021700759","Bulls","TrailBlazers",108,124
+"0021700759","Bulls","Trail Blazers",108,124
 "0021700760","Mavericks","Suns",88,102
 "0021700761","Grizzlies","Pistons",102,104
 "0021700762","Raptors","Wizards",119,122
@@ -767,7 +767,7 @@
 "0021700766","Pacers","Hornets",126,133
 "0021700767","Hawks","Celtics",110,119
 "0021700768","Lakers","Nets",102,99
-"0021700769","TrailBlazers","Raptors",105,130
+"0021700769","Trail Blazers","Raptors",105,130
 "0021700770","Heat","76ers",97,103
 "0021700771","Knicks","Bucks",90,92
 "0021700772","Pelicans","Thunder",114,100
@@ -782,13 +782,13 @@
 "0021700781","Jazz","Spurs",120,111
 "0021700782","Warriors","Nuggets",108,115
 "0021700783","Mavericks","Kings",106,99
-"0021700784","TrailBlazers","Celtics",96,97
+"0021700784","Trail Blazers","Celtics",96,97
 "0021700785","Bucks","Nets",109,94
 "0021700786","Hawks","Knicks",99,96
 "0021700787","Grizzlies","Raptors",86,101
 "0021700788","Lakers","Thunder",108,104
 "0021700789","Hornets","Suns",115,110
-"0021700790","TrailBlazers","Pistons",91,111
+"0021700790","Trail Blazers","Pistons",91,111
 "0021700791","Wizards","Pacers",111,102
 "0021700792","Magic","Heat",111,109
 "0021700793","Jazz","Pelicans",133,109
@@ -812,7 +812,7 @@
 "0021700811","Hawks","Magic",98,100
 "0021700812","Knicks","Raptors",88,113
 "0021700813","Celtics","Wizards",110,104
-"0021700814","Hornets","TrailBlazers",103,109
+"0021700814","Hornets","Trail Blazers",103,109
 "0021700815","Mavericks","Warriors",103,121
 "0021700816","Thunder","Lakers",81,106
 "0021700817","Clippers","Pistons",108,95
@@ -823,7 +823,7 @@
 "0021700822","Timberwolves","Bulls",113,114
 "0021700823","Nuggets","Rockets",104,130
 "0021700824","Hornets","Jazz",94,106
-"0021700825","TrailBlazers","Kings",118,100
+"0021700825","Trail Blazers","Kings",118,100
 "0021700826","Pelicans","Nets",138,128
 "0021700827","Bucks","Magic",111,104
 "0021700828","Clippers","76ers",98,112
@@ -838,7 +838,7 @@
 "0021700837","Mavericks","Rockets",97,104
 "0021700838","Kings","Timberwolves",106,111
 "0021700839","Grizzlies","Thunder",92,110
-"0021700840","Jazz","TrailBlazers",115,96
+"0021700840","Jazz","Trail Blazers",115,96
 "0021700841","Pelicans","Pistons",118,103
 "0021700842","Knicks","76ers",92,108
 "0021700843","Clippers","Nets",114,101
@@ -862,7 +862,7 @@
 "0021700861","Thunder","Grizzlies",121,114
 "0021700862","Lakers","Pelicans",117,139
 "0021700863","Suns","Jazz",97,107
-"0021700864","Warriors","TrailBlazers",117,123
+"0021700864","Warriors","Trail Blazers",117,123
 "0021700865","Nuggets","Bucks",134,123
 "0021700866","Lakers","Timberwolves",111,119
 "0021700867","Nets","Hornets",96,111
@@ -880,14 +880,14 @@
 "0021700879","Heat","Pelicans",123,124
 "0021700880","Spurs","Nuggets",119,122
 "0021700881","Clippers","Suns",128,117
-"0021700882","TrailBlazers","Jazz",100,81
+"0021700882","Trail Blazers","Jazz",100,81
 "0021700883","Mavericks","Lakers",102,124
 "0021700884","Magic","76ers",105,116
 "0021700885","Grizzlies","Heat",89,115
 "0021700886","Celtics","Knicks",121,112
 "0021700887","Thunder","Warriors",80,112
 "0021700888","Bulls","Timberwolves",104,122
-"0021700889","TrailBlazers","Suns",106,104
+"0021700889","Trail Blazers","Suns",106,104
 "0021700890","Mavericks","Jazz",90,97
 "0021700891","Lakers","Kings",113,108
 "0021700892","Pistons","Hornets",98,114
@@ -909,7 +909,7 @@
 "0021700908","Nets","Cavaliers",123,129
 "0021700909","76ers","Heat",101,102
 "0021700910","Wizards","Bucks",107,104
-"0021700911","Kings","TrailBlazers",99,116
+"0021700911","Kings","Trail Blazers",99,116
 "0021700912","Clippers","Nuggets",122,120
 "0021700913","Bucks","Pistons",87,110
 "0021700914","Raptors","Magic",117,104
@@ -923,7 +923,7 @@
 "0021700922","Lakers","Heat",131,113
 "0021700923","76ers","Cavaliers",108,97
 "0021700924","Nets","Kings",111,116
-"0021700925","Timberwolves","TrailBlazers",99,108
+"0021700925","Timberwolves","Trail Blazers",99,108
 "0021700926","Pistons","Magic",106,115
 "0021700927","Hornets","76ers",99,110
 "0021700928","Warriors","Hawks",114,109
@@ -939,7 +939,7 @@
 "0021700938","Pistons","Heat",96,105
 "0021700939","Celtics","Rockets",120,123
 "0021700940","Lakers","Spurs",116,112
-"0021700941","Thunder","TrailBlazers",100,108
+"0021700941","Thunder","Trail Blazers",100,108
 "0021700942","Jazz","Kings",98,91
 "0021700943","Suns","Hawks",112,113
 "0021700944","Hornets","Raptors",98,103
@@ -954,13 +954,13 @@
 "0021700953","Celtics","Bulls",105,89
 "0021700954","Grizzlies","Spurs",98,100
 "0021700955","Magic","Jazz",80,94
-"0021700956","TrailBlazers","Lakers",108,103
+"0021700956","Trail Blazers","Lakers",108,103
 "0021700957","76ers","Hornets",128,114
 "0021700958","Hawks","Raptors",90,106
 "0021700959","Heat","Wizards",113,117
 "0021700960","Rockets","Thunder",122,112
 "0021700961","Nuggets","Mavericks",107,118
-"0021700962","Knicks","TrailBlazers",87,111
+"0021700962","Knicks","Trail Blazers",87,111
 "0021700963","Nets","Warriors",101,114
 "0021700964","Pelicans","Clippers",121,116
 "0021700965","Jazz","Pacers",104,84
@@ -982,7 +982,7 @@
 "0021700981","Knicks","Bucks",112,120
 "0021700982","Wizards","Pelicans",116,97
 "0021700983","Lakers","Nuggets",116,125
-"0021700984","Warriors","TrailBlazers",108,125
+"0021700984","Warriors","Trail Blazers",108,125
 "0021700985","Magic","Kings",88,94
 "0021700986","Cavaliers","Clippers",102,116
 "0021700987","Suns","Hornets",115,122
@@ -1002,7 +1002,7 @@
 "0021701001","Spurs","Rockets",93,109
 "0021701002","Bucks","Grizzlies",121,103
 "0021701003","Kings","Thunder",101,106
-"0021701004","Heat","TrailBlazers",99,115
+"0021701004","Heat","Trail Blazers",99,115
 "0021701005","Pacers","76ers",101,98
 "0021701006","Timberwolves","Wizards",116,111
 "0021701007","Thunder","Hawks",119,107
@@ -1026,7 +1026,7 @@
 "0021701025","Pelicans","Spurs",93,98
 "0021701026","Pistons","Nuggets",113,120
 "0021701027","Suns","Jazz",88,116
-"0021701028","Cavaliers","TrailBlazers",105,113
+"0021701028","Cavaliers","Trail Blazers",105,113
 "0021701029","Celtics","Magic",92,83
 "0021701030","Nets","76ers",116,120
 "0021701031","Mavericks","Raptors",115,122
@@ -1043,11 +1043,11 @@
 "0021701042","Timberwolves","Spurs",101,117
 "0021701043","Kings","Jazz",97,103
 "0021701044","Warriors","Suns",124,109
-"0021701045","Pistons","TrailBlazers",87,100
+"0021701045","Pistons","Trail Blazers",87,100
 "0021701046","Thunder","Raptors",132,125
 "0021701047","Celtics","Pelicans",89,108
 "0021701048","Rockets","Timberwolves",129,120
-"0021701049","TrailBlazers","Clippers",122,109
+"0021701049","Trail Blazers","Clippers",122,109
 "0021701050","Bucks","Cavaliers",117,124
 "0021701051","Lakers","Pacers",100,110
 "0021701052","Hornets","76ers",94,108
@@ -1062,7 +1062,7 @@
 "0021701061","Mavericks","Pelicans",105,115
 "0021701062","Hawks","Jazz",99,94
 "0021701063","Pistons","Suns",115,88
-"0021701064","Rockets","TrailBlazers",115,111
+"0021701064","Rockets","Trail Blazers",115,111
 "0021701065","Raptors","Cavaliers",129,132
 "0021701066","Grizzlies","76ers",105,119
 "0021701067","Hornets","Nets",111,105
@@ -1084,7 +1084,7 @@
 "0021701083","Bucks","Bulls",118,105
 "0021701084","Heat","Thunder",99,105
 "0021701085","Jazz","Spurs",120,124
-"0021701086","Celtics","TrailBlazers",105,100
+"0021701086","Celtics","Trail Blazers",105,100
 "0021701087","Hawks","Warriors",94,106
 "0021701088","Timberwolves","76ers",108,120
 "0021701089","Bulls","Pistons",95,117
@@ -1098,7 +1098,7 @@
 "0021701097","Clippers","Raptors",117,106
 "0021701098","Knicks","Wizards",101,97
 "0021701099","Celtics","Kings",104,93
-"0021701100","TrailBlazers","Thunder",108,105
+"0021701100","Trail Blazers","Thunder",108,105
 "0021701101","Hawks","Rockets",99,118
 "0021701102","Jazz","Warriors",110,91
 "0021701103","Knicks","Hornets",128,137
@@ -1110,14 +1110,14 @@
 "0021701109","Nuggets","Raptors",110,114
 "0021701110","Cavaliers","Heat",79,98
 "0021701111","Bulls","Rockets",86,118
-"0021701112","TrailBlazers","Pelicans",107,103
+"0021701112","Trail Blazers","Pelicans",107,103
 "0021701113","Mavericks","Kings",103,97
 "0021701114","Pacers","Warriors",92,81
 "0021701115","Bucks","Clippers",98,105
 "0021701116","Cavaliers","Hornets",118,105
 "0021701117","Nets","Magic",111,104
 "0021701118","Knicks","76ers",101,118
-"0021701119","TrailBlazers","Grizzlies",103,108
+"0021701119","Trail Blazers","Grizzlies",103,108
 "0021701120","Hawks","Timberwolves",114,126
 "0021701121","Celtics","Jazz",97,94
 "0021701122","Clippers","Suns",111,99
@@ -1135,7 +1135,7 @@
 "0021701134","Timberwolves","Mavericks",93,92
 "0021701135","Grizzlies","Jazz",97,107
 "0021701136","Bucks","Lakers",124,122
-"0021701137","Clippers","TrailBlazers",96,105
+"0021701137","Clippers","Trail Blazers",96,105
 "0021701138","Hornets","Wizards",93,107
 "0021701139","Pistons","Knicks",115,109
 "0021701140","Raptors","Celtics",99,110
@@ -1152,7 +1152,7 @@
 "0021701151","Jazz","Timberwolves",121,97
 "0021701152","Bucks","Nuggets",125,128
 "0021701153","Suns","Warriors",107,117
-"0021701154","Grizzlies","TrailBlazers",98,113
+"0021701154","Grizzlies","Trail Blazers",98,113
 "0021701155","Kings","Lakers",84,83
 "0021701156","Raptors","Cavaliers",106,112
 "0021701157","Nets","76ers",95,121
@@ -1162,7 +1162,7 @@
 "0021701161","Wizards","Rockets",104,120
 "0021701162","Celtics","Bucks",102,106
 "0021701163","Warriors","Thunder",111,107
-"0021701164","TrailBlazers","Mavericks",109,115
+"0021701164","Trail Blazers","Mavericks",109,115
 "0021701165","Pacers","Nuggets",104,107
 "0021701166","Lakers","Jazz",110,117
 "0021701167","Kings","Suns",94,97
@@ -1175,7 +1175,7 @@
 "0021701174","Spurs","Lakers",112,122
 "0021701175","Warriors","Pacers",106,126
 "0021701176","Wizards","Cavaliers",115,119
-"0021701177","TrailBlazers","Rockets",94,96
+"0021701177","Trail Blazers","Rockets",94,96
 "0021701178","Nets","Bucks",119,111
 "0021701179","Clippers","Jazz",95,117
 "0021701180","Timberwolves","Nuggets",96,100
@@ -1194,7 +1194,7 @@
 "0021701193","Nets","Bulls",124,96
 "0021701194","Thunder","Rockets",108,102
 "0021701195","Pelicans","Warriors",126,120
-"0021701196","TrailBlazers","Spurs",105,116
+"0021701196","Trail Blazers","Spurs",105,116
 "0021701197","Pacers","Hornets",123,117
 "0021701198","Mavericks","76ers",97,109
 "0021701199","Pistons","Grizzlies",117,130
@@ -1209,7 +1209,7 @@
 "0021701208","Magic","Bucks",86,102
 "0021701209","Grizzlies","Timberwolves",94,113
 "0021701210","Kings","Spurs",85,98
-"0021701211","TrailBlazers","Nuggets",82,88
+"0021701211","Trail Blazers","Nuggets",82,88
 "0021701212","Pelicans","Clippers",113,100
 "0021701213","Hornets","Pacers",119,93
 "0021701214","76ers","Hawks",121,113
@@ -1227,5 +1227,5 @@
 "0021701226","Spurs","Pelicans",98,122
 "0021701227","Grizzlies","Thunder",123,137
 "0021701228","Lakers","Clippers",115,100
-"0021701229","Jazz","TrailBlazers",93,102
+"0021701229","Jazz","Trail Blazers",93,102
 "0021701230","Rockets","Kings",83,96

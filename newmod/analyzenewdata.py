@@ -1,4 +1,8 @@
 import pandas as pd
+import pickle
+import numpy as np
+
+
 
 
 # load regular season data
@@ -10,7 +14,7 @@ df = pd.read_csv('events_2017-2018_pbp.csv',
 
 colnames = pd.read_csv('colnames.csv',header=None)
 
-
+"""
 # make a dictionary of all 5-person units
 u2i = {}
 i2u = {}
@@ -30,12 +34,13 @@ for i in range(df.shape[0]):
     
 
 
-import pickle
-
 
 pickle.dump(u2i, open('u2i.pickle', 'wb'))
 pickle.dump(i2u, open('i2u.pickle', 'wb'))
+"""
 
+u2i = pickle.load(open('u2i.pickle','rb'))
+i2u = pickle.load(open('i2u.pickle','rb'))
 
 # u2i[tuple(sorted([203926, 101127, 201584, 203124, 204001]))]
 # df.loc[480]
@@ -46,8 +51,6 @@ uniqteamnames = sorted(list(set(df['AWAY_TEAM'].append(df['HOME_TEAM']))))
 # print(uniqteamnames)
 # print(len(uniqteamnames))
 
-
-import numpy as np
 
 
 def myprocess(mat):
@@ -65,12 +68,16 @@ for tn in uniqteamnames:
     gametraj[tn] = {}
 
 
+games = pd.read_csv('games.csv')
+
+
 curgameid = -999999
 for i in range(df.shape[0]):
     # check if current row is first row of new game
     if curgameid != df.loc[i]['GAME_ID']:
         curgameid = df.loc[i]['GAME_ID']
-        tn = df.loc[i]['HOME_TEAM']
+        tn = games[games['gameids']==curgameid]['home'].values[0]
+        # tn = df.loc[i]['HOME_TEAM']
         times = []
         units = []
         teamscores = []
@@ -111,7 +118,7 @@ for i in range(df.shape[0]):
     # check if current row is first row of new game
     if curgameid != df.loc[i]['GAME_ID']:
         curgameid = df.loc[i]['GAME_ID']
-        tn = df.loc[i]['AWAY_TEAM']
+        tn = games[games['gameids']==curgameid]['away'].values[0]
         times = []
         units = []
         teamscores = []
