@@ -3,9 +3,13 @@ import pandas as pd
 import pickle
 import mcoLH as mco
 
+# set year
+year = 2017
+
 # load games and game trajectories
-games = pickle.load(open('games.pickle','rb'))
-gametraj = pickle.load(open('gametraj.pickle','rb'))
+games = pickle.load(open('./'+str(year)+'/games.pickle','rb'))
+gametraj = pickle.load(open('./'+str(year)+'/gametraj.pickle','rb'))
+i2u = pickle.load(open('./'+str(year)+'/i2u.pickle','rb'))
 
 # team names
 teamnames = list(gametraj.keys())
@@ -21,7 +25,7 @@ hg = games['home'] == curteam
 ag = games['away'] == curteam
 curteamgames = games[hg | ag].sort_values(by=['dates'])
 traingids = curteamgames.iloc[:traingames]['gameids'].tolist()
-testgids = curteamgames.iloc[traingames:traingames+1]['gameids'].tolist()
+testgids = curteamgames.iloc[traingames:]['gameids'].tolist()
 
 # create list of all unique lineups encountered in training set
 trainlineups = []
@@ -78,6 +82,25 @@ fixeq = mco.equilib(phatfix, 'CTMC')
 testgames = len(testgids)
 rawtesterrors = np.zeros(testgames)
 fixtesterrors = np.zeros(testgames)
+rawpttesterrors = np.zeros(testgames)
+fixpttesterrors = np.zeros(testgames)
+
+# normalized to game length of 1,
+# these dicts record predictions (raw & fixed) of
+# how many seconds each player plays
+rawplayerpred = {}
+fixplayerpred = {}
+for i in range(len(trainlineups)):
+    lineupnumber = trainlineups[i]
+    unit = i2u[lineupnumber]
+    for player in unit:
+        if player in rawplayerpred:
+            rawplayerpred[player] += raweq[i]
+            fixplayerpred[player] += fixeq[i]
+        else:
+            rawplayerpred[player] = raweq[i]
+            fixplayerpred[player] = fixeq[i]
+
 
 for i in range(testgames):
     thisgame = gametraj[curteam][testgids[i]]
@@ -85,6 +108,7 @@ for i in range(testgames):
     rawpred = raweq*gamelen
     fixpred = fixeq*gamelen
     testresults = {}
+    testplayertime = {}
     for j in range(thisgame.shape[0]-1):
         testlineup = thisgame[j,1]
         secondsplayed = thisgame[j+1,0] - thisgame[j,0]
@@ -92,6 +116,12 @@ for i in range(testgames):
             testresults[testlineup] = secondsplayed
         else:
             testresults[testlineup] += secondsplayed
+        unit = i2u[testlineup]
+        for player in unit:
+            if player in testplayertime:
+                testplayertime[player] += secondsplayed
+            else:
+                testplayertime[player] = secondsplayed
 
     for testlineup in testresults:
         if testlineup not in trainlineups:
@@ -100,6 +130,16 @@ for i in range(testgames):
         else:
             rawtesterrors[i] += np.abs(testresults[testlineup] - rawpred[trainlookup[testlineup]])
             fixtesterrors[i] += np.abs(testresults[testlineup] - fixpred[trainlookup[testlineup]])
+
+    for player in testplayertime:
+         if player not in rawplayerpred:
+             rawpttesterrors[i] += testplayertime[player]
+         else:
+             rawpttesterrors[i] += np.abs(testplayertime[player] - rawplayerpred[player]*gamelen)
+         if player not in fixplayerpred:
+             fixpttesterrors[i] += testplayertime[player]
+         else:
+             fixpttesterrors[i] += np.abs(testplayertime[player] - fixplayerpred[player]*gamelen)
 
 # to do:
 # -- compare lineup distribution across test set
