@@ -70,16 +70,15 @@ def getGameInfo(gameid):
     
     return gameid, awayteam, hometeam, awayscore, homescore, gamedate
 
-
-
 # this function expects year to be an integer
 def getAllGames(year):
     gameids = ['002'+str(year)[2:]+'{:0>5}'.format(str(j)) for j in range(1,1231)]
+    gids = [int(x) for x in gameids]
     emptystrlist = ['' for i in range(1230)]
     emptyintlist = [0 for i in range(1230)]
     emptydatelist = [datetime.datetime(year=year,month=1,day=1) for i in range(1230)]
     
-    games = pd.DataFrame({'gameids': gameids,
+    games = pd.DataFrame({'gameids': gids,
                           'away': emptystrlist,
                           'home': emptystrlist,
                           'awayscore': emptyintlist,
@@ -90,9 +89,11 @@ def getAllGames(year):
         gid = gameids[i]
         info = getGameInfo(gid)
         print(i, gid, info[5])
-        # the following is BROKEN and needs to be fixed
-        for j in range(1,6):
-
+        games.at[i,'away'] = info[1]
+        games.at[i,'home'] = info[2]
+        games.at[i,'awayscore'] = info[3]
+        games.at[i,'homescore'] = info[4]
+        games.at[i,'dates'] = info[5]
 
     pickle.dump(games, open('./'+str(year)+'/games.pickle','wb'))
 
