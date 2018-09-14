@@ -2,11 +2,11 @@ import pandas as pd
 import pickle
 import numpy as np
 
-
-
+year = 2016
+csvfname = 'events_'+str(year)+'-'+str(year+1)+'_pbp.csv'
 
 # load regular season data
-df = pd.read_csv('events_2017-2018_pbp.csv',
+df = pd.read_csv(csvfname,
                  usecols=[4,7,8,34,35,36,37,38,
                           91,92,93,94,95,
                          96,97,98,99,100])
@@ -14,7 +14,6 @@ df = pd.read_csv('events_2017-2018_pbp.csv',
 
 colnames = pd.read_csv('colnames.csv',header=None)
 
-"""
 # make a dictionary of all 5-person units
 u2i = {}
 i2u = {}
@@ -35,12 +34,13 @@ for i in range(df.shape[0]):
 
 
 
-pickle.dump(u2i, open('u2i.pickle', 'wb'))
-pickle.dump(i2u, open('i2u.pickle', 'wb'))
-"""
+pickle.dump(u2i, open('./'+str(year)+'/u2i.pickle', 'wb'))
+pickle.dump(i2u, open('./'+str(year)+'/i2u.pickle', 'wb'))
 
+"""
 u2i = pickle.load(open('u2i.pickle','rb'))
 i2u = pickle.load(open('i2u.pickle','rb'))
+"""
 
 # u2i[tuple(sorted([203926, 101127, 201584, 203124, 204001]))]
 # df.loc[480]
@@ -108,7 +108,7 @@ for i in range(df.shape[0]):
 
 
 
-pickle.dump(gametraj, open('gametrajhalf.pickle', 'wb'))
+pickle.dump(gametraj, open('./'+str(year)+'/gametrajhalf.pickle', 'wb'))
 
 
 
@@ -149,7 +149,7 @@ for i in range(df.shape[0]):
 
 
 
-pickle.dump(gametraj, open('gametraj.pickle', 'wb'))
+pickle.dump(gametraj, open('./'+str(year)+'/gametraj.pickle', 'wb'))
 
 
 
