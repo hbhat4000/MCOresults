@@ -4,142 +4,174 @@ import pickle
 import mcoLH as mco
 
 # set year
-year = 2017
-
-# load games and game trajectories
-games = pickle.load(open('./'+str(year)+'/games.pickle','rb'))
-gametraj = pickle.load(open('./'+str(year)+'/gametraj.pickle','rb'))
-i2u = pickle.load(open('./'+str(year)+'/i2u.pickle','rb'))
-
+# year = 2017
 # team names
-teamnames = list(gametraj.keys())
-
+# teamnames = list(gametraj.keys())
 # pick a team, just for now
-curteam = teamnames[14]
-
+# curteam = teamnames[14]
 # set number of games to train on
-traingames = 40
+# traingames = 40
 
-# figure out which gameids are in the training and test sets
-hg = games['home'] == curteam
-ag = games['away'] == curteam
-curteamgames = games[hg | ag].sort_values(by=['dates'])
-traingids = curteamgames.iloc[:traingames]['gameids'].tolist()
-testgids = curteamgames.iloc[traingames:]['gameids'].tolist()
+def testperformance(year, curteam, traingames):
+    # load games and game trajectories
+    games = pickle.load(open('./'+str(year)+'/games.pickle','rb'))
+    gametraj = pickle.load(open('./'+str(year)+'/gametraj.pickle','rb'))
+    i2u = pickle.load(open('./'+str(year)+'/i2u.pickle','rb'))
 
-# create list of all unique lineups encountered in training set
-trainlineups = []
-for i in traingids:
-    thislist = gametraj[curteam][i][:,1].tolist()
-    for j in thislist:
-        trainlineups.append(j)
+    # figure out which gameids are in the training and test sets
+    hg = games['home'] == curteam
+    ag = games['away'] == curteam
+    curteamgames = games[hg | ag].sort_values(by=['dates'])
+    traingids = curteamgames.iloc[:traingames]['gameids'].tolist()
+    testgids = curteamgames.iloc[traingames:]['gameids'].tolist()
 
-# need this to standardize the state space
-trainlineups = list(set(trainlineups))
-trainlookup = {}
-for i in trainlineups:
-    trainlookup[i] = trainlineups.index(i)
+    # create list of all unique lineups encountered in training set
+    trainlineups = []
+    for i in traingids:
+        thislist = gametraj[curteam][i][:,1].tolist()
+        for j in thislist:
+            trainlineups.append(j)
 
-# scan through the gametraj matrices and produce two ingredients
-# 1) a list of time sequences
-# 2) a list of discrete-state time series on a standardized state space
-alltseq = [[]]*traingames
-alldsts = [[]]*traingames
-for i in range(traingames):
-    ts = gametraj[curteam][traingids[i]][:,0].tolist()
-    ds = list(map(lambda x: trainlookup[x], gametraj[curteam][traingids[i]][:,1]))
-    ctr = 0
-    while ds[len(ds)-ctr-2] == ds[len(ds)-1]:
-        ctr += 1
+    # need this to standardize the state space
+    trainlineups = list(set(trainlineups))
+    trainlookup = {}
+    for i in trainlineups:
+        trainlookup[i] = trainlineups.index(i)
 
-    alltseq[i] = ts[0:len(ds)-ctr]
-    alldsts[i] = ds[0:len(ds)-ctr]
+    # scan through the gametraj matrices and produce two ingredients
+    # 1) a list of time sequences
+    # 2) a list of discrete-state time series on a standardized state space
+    alltseq = [[]]*traingames
+    alldsts = [[]]*traingames
+    for i in range(traingames):
+        ts = gametraj[curteam][traingids[i]][:,0].tolist()
+        ds = list(map(lambda x: trainlookup[x], gametraj[curteam][traingids[i]][:,1]))
+        ctr = 0
+        while ds[len(ds)-ctr-2] == ds[len(ds)-1]:
+            ctr += 1
 
-# train naive CTMC
-phat, absstates, stt = mco.trainCTMCm(alldsts, alltseq, len(trainlineups))
+        alltseq[i] = ts[0:len(ds)-ctr]
+        alldsts[i] = ds[0:len(ds)-ctr]
 
-# raw equilibrium
-raweq = mco.equilib(phat, 'CTMC')
+    # train naive CTMC
+    phat, absstates, stt = mco.trainCTMCm(alldsts, alltseq, len(trainlineups))
 
-# compute empirical fraction of time in each state
-wvec = stt/np.sum(stt)
+    # raw equilibrium
+    raweq = mco.equilib(phat, 'CTMC')
 
-# apply MCO to retrain CTMC
-eps, constrviol = mco.fixCTMC(phat, wvec, forcePos = True)
+    # compute empirical fraction of time in each state
+    wvec = stt/np.sum(stt)
 
-# form new transition rate matrix
-phatfix = mco.addPert(phat, eps, len(trainlineups), 'CTMC')
+    # apply MCO to retrain CTMC
+    eps, constrviol = mco.fixCTMC(phat, wvec, forcePos = True)
 
-# new equilibrium
-fixeq = mco.equilib(phatfix, 'CTMC')
+    # form new transition rate matrix
+    phatfix = mco.addPert(phat, eps, len(trainlineups), 'CTMC')
 
-# evaluate model on test set
-# for each game, figure out how long it is
-# extrapolate our raweq and fixeq to the game length to get
-# prediction of how much each lineup plays
-# (remember to convert back to original lineup number)
-# then compare with reality
-testgames = len(testgids)
-rawtesterrors = np.zeros(testgames)
-fixtesterrors = np.zeros(testgames)
-rawpttesterrors = np.zeros(testgames)
-fixpttesterrors = np.zeros(testgames)
+    # new equilibrium
+    fixeq = mco.equilib(phatfix, 'CTMC')
 
-# normalized to game length of 1,
-# these dicts record predictions (raw & fixed) of
-# how many seconds each player plays
-rawplayerpred = {}
-fixplayerpred = {}
-for i in range(len(trainlineups)):
-    lineupnumber = trainlineups[i]
-    unit = i2u[lineupnumber]
-    for player in unit:
-        if player in rawplayerpred:
-            rawplayerpred[player] += raweq[i]
-            fixplayerpred[player] += fixeq[i]
-        else:
-            rawplayerpred[player] = raweq[i]
-            fixplayerpred[player] = fixeq[i]
+    # evaluate model on test set
+    # for each game, figure out how long it is
+    # extrapolate our raweq and fixeq to the game length to get
+    # prediction of how much each lineup plays
+    # (remember to convert back to original lineup number)
+    # then compare with reality
+    testgames = len(testgids)
+    rawtesterrors = np.zeros(testgames)
+    fixtesterrors = np.zeros(testgames)
+    rawpttesterrors = np.zeros(testgames)
+    fixpttesterrors = np.zeros(testgames)
 
-
-for i in range(testgames):
-    thisgame = gametraj[curteam][testgids[i]]
-    gamelen = thisgame[thisgame.shape[0]-1,0]
-    rawpred = raweq*gamelen
-    fixpred = fixeq*gamelen
-    testresults = {}
-    testplayertime = {}
-    for j in range(thisgame.shape[0]-1):
-        testlineup = thisgame[j,1]
-        secondsplayed = thisgame[j+1,0] - thisgame[j,0]
-        if testlineup not in testresults:
-            testresults[testlineup] = secondsplayed
-        else:
-            testresults[testlineup] += secondsplayed
-        unit = i2u[testlineup]
+    # normalized to game length of 1,
+    # these dicts record predictions (raw & fixed) of
+    # how many seconds each player plays
+    rawplayerpred = {}
+    fixplayerpred = {}
+    for i in range(len(trainlineups)):
+        lineupnumber = trainlineups[i]
+        unit = i2u[lineupnumber]
         for player in unit:
-            if player in testplayertime:
-                testplayertime[player] += secondsplayed
+            if player in rawplayerpred:
+                rawplayerpred[player] += raweq[i]
+                fixplayerpred[player] += fixeq[i]
             else:
-                testplayertime[player] = secondsplayed
+                rawplayerpred[player] = raweq[i]
+                fixplayerpred[player] = fixeq[i]
 
-    for testlineup in testresults:
-        if testlineup not in trainlineups:
-            rawtesterrors[i] += testresults[testlineup]
-            fixtesterrors[i] += testresults[testlineup]
+
+    totalgamelen = 0
+    testaggtime = {}
+    for i in range(testgames):
+        thisgame = gametraj[curteam][testgids[i]]
+        gamelen = thisgame[thisgame.shape[0]-1,0]
+        totalgamelen += gamelen
+        rawpred = raweq*gamelen
+        fixpred = fixeq*gamelen
+        testresults = {}
+        testplayertime = {}
+
+        # go through the game in the test set
+        # figure out which lineups appeared in the game and
+        # how long each lineup played for
+        # put that information into:
+        # ---> testresults (per-game) and
+        # ---> testaggtime (aggregated)
+        # figure out which players appeared in the game and
+        # how long each player played for
+        # put that information into testplayertime
+        for j in range(thisgame.shape[0]-1):
+            testlineup = thisgame[j,1]
+            secondsplayed = thisgame[j+1,0] - thisgame[j,0]
+            if testlineup not in testresults:
+                testresults[testlineup] = secondsplayed
+            else:
+                testresults[testlineup] += secondsplayed
+            
+            if testlineup not in testaggtime:
+                testaggtime[testlineup] = secondsplayed
+            else:
+                testaggtime[testlineup] += secondsplayed
+            
+            unit = i2u[testlineup]
+            for player in unit:
+                if player in testplayertime:
+                    testplayertime[player] += secondsplayed
+                else:
+                    testplayertime[player] = secondsplayed
+        
+        # compute per-game lineup errors using raw and fixed equilibrium vectors
+        for testlineup in testresults:
+            if testlineup not in trainlineups:
+                rawtesterrors[i] += testresults[testlineup]
+                fixtesterrors[i] += testresults[testlineup]
+            else:
+                rawtesterrors[i] += np.abs(testresults[testlineup] - rawpred[trainlookup[testlineup]])
+                fixtesterrors[i] += np.abs(testresults[testlineup] - fixpred[trainlookup[testlineup]])
+        
+        # compute per-game player errors using raw and fixed equilibrium vectors
+        for player in testplayertime:
+             if player not in rawplayerpred:
+                 rawpttesterrors[i] += testplayertime[player]
+             else:
+                 rawpttesterrors[i] += np.abs(testplayertime[player] - rawplayerpred[player]*gamelen)
+             if player not in fixplayerpred:
+                 fixpttesterrors[i] += testplayertime[player]
+             else:
+                 fixpttesterrors[i] += np.abs(testplayertime[player] - fixplayerpred[player]*gamelen)
+
+    rawaggerror = 0
+    fixaggerror = 0
+    # compute aggregated lineup errors
+    for lineup in testaggtime:
+        if lineup not in trainlineups:
+            rawaggerror += testaggtime[lineup]
+            fixaggerror += testaggtime[lineup]
         else:
-            rawtesterrors[i] += np.abs(testresults[testlineup] - rawpred[trainlookup[testlineup]])
-            fixtesterrors[i] += np.abs(testresults[testlineup] - fixpred[trainlookup[testlineup]])
+            rawaggerror += np.abs(testaggtime[lineup] - totalgamelen*raweq[trainlookup[lineup]])
+            fixaggerror += np.abs(testaggtime[lineup] - totalgamelen*fixeq[trainlookup[lineup]])
 
-    for player in testplayertime:
-         if player not in rawplayerpred:
-             rawpttesterrors[i] += testplayertime[player]
-         else:
-             rawpttesterrors[i] += np.abs(testplayertime[player] - rawplayerpred[player]*gamelen)
-         if player not in fixplayerpred:
-             fixpttesterrors[i] += testplayertime[player]
-         else:
-             fixpttesterrors[i] += np.abs(testplayertime[player] - fixplayerpred[player]*gamelen)
+    return rawtesterrors, fixtesterrors, rawpttesterrors, fixpttesterrors, rawaggerror, fixaggerror, totalgamelen
 
 # to do:
 # -- compare lineup distribution across test set
