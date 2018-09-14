@@ -90,8 +90,8 @@ def getAllGames(year):
         gid = gameids[i]
         info = getGameInfo(gid)
         print(i, gid, info[5])
+        # the following is BROKEN and needs to be fixed
         for j in range(1,6):
-            games.loc[i,j] = info[j]
 
 
     pickle.dump(games, open('./'+str(year)+'/games.pickle','wb'))

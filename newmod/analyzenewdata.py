@@ -14,6 +14,8 @@ df = pd.read_csv(csvfname,
 
 colnames = pd.read_csv('colnames.csv',header=None)
 
+"""
+
 # make a dictionary of all 5-person units
 u2i = {}
 i2u = {}
@@ -38,9 +40,9 @@ pickle.dump(u2i, open('./'+str(year)+'/u2i.pickle', 'wb'))
 pickle.dump(i2u, open('./'+str(year)+'/i2u.pickle', 'wb'))
 
 """
-u2i = pickle.load(open('u2i.pickle','rb'))
-i2u = pickle.load(open('i2u.pickle','rb'))
-"""
+
+u2i = pickle.load(open('./'+str(year)+'/u2i.pickle','rb'))
+i2u = pickle.load(open('./'+str(year)+'/i2u.pickle','rb'))
 
 # u2i[tuple(sorted([203926, 101127, 201584, 203124, 204001]))]
 # df.loc[480]
@@ -69,7 +71,7 @@ for tn in uniqteamnames:
 
 
 # need this because the event....csv files do not have correct home/away teams
-games = pd.read_csv('games.csv')
+games = pickle.load(open('./'+str(year)+'/games.pickle','rb'))
 
 
 curgameid = -999999
