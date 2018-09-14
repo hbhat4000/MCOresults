@@ -68,6 +68,7 @@ for tn in uniqteamnames:
     gametraj[tn] = {}
 
 
+# need this because the event....csv files do not have correct home/away teams
 games = pd.read_csv('games.csv')
 
 
